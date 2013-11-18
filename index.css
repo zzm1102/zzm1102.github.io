@@ -1,0 +1,8 @@
+div{
+	font-family: arial;
+	margin: auto;
+	border: solid 30px yellow;
+	width: 1200px;
+	background: rgb(150,180,30);
+	text-align: center;
+}
