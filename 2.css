@@ -1,0 +1,30 @@
+.wrap{
+	font-family: arial;
+	min-width: 600px;
+	width: 70%;
+	margin:auto;
+	background-color: rgb(210,250,70);
+	overflow: hidden;
+}
+
+.content,aside {
+height: 600px;
+}
+
+.content{
+	background: #e3e3e3;
+	float: left;
+	width: 80%;
+}
+
+aside {
+	background: rgb(30,200,200);
+	float: left;
+	width: 20%;
+}
+
+aside ul{
+	padding: 10px;
+	list-style: none;
+	border:1px solid yellow;
+}
