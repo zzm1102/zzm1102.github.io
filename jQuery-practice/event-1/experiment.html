@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="day.css">
+
+  <style>
+  * {
+    font-family: arial;
+  }
+  button {
+    border-radius: 10px;
+    padding: .7em;
+    cursor: pointer;
+  }
+  </style>
+  <title>Document</title>
+</head>
+<body>
+  <h1>My First Website</h1>
+  <button data-file='day'>Day</button>
+  <button data-file='night'>Night</button>
+
+  <script src="../jquery-2.1.1.js"></script>
+
+<script>
+(function() {
+  $('button').on('click', function() {
+    var $this = $(this),
+        stylesheet = $this.data('file');
+
+    $('link').attr('href', stylesheet + '.css');
+    $this.attr('disabled','disabled')
+          .siblings('button').removeAttr('disabled');
+
+  })
+})();
+  
+</script>
+</body>
+</html>

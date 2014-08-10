@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>2</title>
+	<link rel="stylesheet" href="2.css">
+</head>
+<body>
+	<dl class="question">
+		<dt>What's your favourite...?</dt>
+		<dd>It supposed to be...</dd>
+		<dt>What's your favourite...?</dt>
+		<dd>It supposed to be...</dd>
+		<dt>What's your favourite...?</dt>
+		<dd>It supposed to be...</dd>
+		<dt>What's your favourite...?</dt>
+		<dd>It supposed to be...</dd>
+		<dt>What's your favourite...?</dt>
+		<dd>It supposed to be...</dd>
+	</dl>
+	<script src="../jquery-2.1.1.js"></script>
+
+	<script>
+(function() {
+	var dd = $('dd');
+	dd.filter(':nth-child(n+4)').addClass('hide');
+
+	$('dl').on('mouseenter','dt', function() {
+		$(this).next().slideDown(300)
+		.siblings('dd').slideUp(300);
+	})
+})();
+	</script>
+
+</body>
+</html>

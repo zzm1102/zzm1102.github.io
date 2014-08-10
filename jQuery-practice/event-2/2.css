@@ -1,0 +1,24 @@
+* {
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	margin: auto;
+	width: 600px;
+	text-align: center;
+}
+
+dt {
+	background-color: #e3e3e3;
+	font-size: 2em;
+	padding: .3em 0;
+	border-bottom: 1px solid #c5c5c5;
+	border-top: 1px solid white;
+	cursor: pointer;
+}
+
+dd {
+	font-size: 1.5em;
+	padding: .3em 0;
+}
+
+.hide {
+	display: none;
+}

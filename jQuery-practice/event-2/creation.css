@@ -1,0 +1,40 @@
+body {
+	margin: 0;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	width: 900px;
+}
+.box {
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	position: absolute;
+	top: 200px;
+	left: 300px;
+	display: none;
+}
+
+.color {
+	background-color: yellow;	
+}
+.circle {
+	-webkit-transition: border-radius 3s;
+	-o-transition: border-radius 3s;
+	transition: border-radius 3s;
+	border-radius: 50%;
+}
+
+/*.func-button {
+	top: 100px;
+	left: 400px;
+	position: absolute;
+	text-align: center;
+}*/
+
+ button {
+	position: absolute;
+	font-size: 1.5em;
+	margin: 2em 23em;
+	padding: 1em;
+	border-radius: 10px;
+	cursor: pointer;
+}
