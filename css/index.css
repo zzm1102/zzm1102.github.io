@@ -38,7 +38,7 @@ body {
 	text-align: center;
 	margin-left: 350px;
 	padding: 20px 10px;
-	font-size: 1.8em;
+	font-size: 1.5em;
 	cursor: pointer;
 }
 
@@ -97,23 +97,31 @@ body {
 	background-color: rgba(0,0,0,.1);
 }
 
-.main article h1 {
+.main article h2 {
 	font-weight: lighter;
+	font-size: 22px;
 }
 
 .main {
-	height: 1000px;
+	height: 100%;
 	background-color: rgba(255,255,255,.5);
 	margin-top: 400px;
 }
 
-.sidebar {
-	height: inherit;
+article a {
+	color: #6d0606;
+	text-decoration: none;
 }
 
-article a {
-	float: right;
-	color: #6d0606;
+.article {
+	margin-bottom: 40px;
+	padding-bottom: 50px;
+	border-bottom: 2px solid #ddd;
+}
+
+.atc-thumbnail img {
+	width: 200px;
+	margin-top: 10px;
 }
 
 

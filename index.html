@@ -6,12 +6,12 @@
 	<link rel="stylesheet" href="css/bootstrap-responsive.css">
 	<!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
 	<link rel="stylesheet" href="css/index.css">
-	<title>Chimon's world|works</title>	
+	<title>Chimon's world |works</title>	
 </head>
 <body class="reverse">
 	<div class="wrap container-fluid">
 		<header class="row-fluid">
-			<div class="reverse-btn reverse">Click to reverse !</div>
+			<div class="reverse-btn reverse">MIRROR WORLD!<br>Click here : )</div>
 			<div class="website-name span5 offset7">
 				<h1>HI THERE!</h1>
 				<h2>Welcome to Chimon's new place</h2>
@@ -23,7 +23,7 @@
 		</header>
 		<div class="auther span12 row-fluid">
 			<div class="say-sth span8">
-				<p>Some really silly foreword. : ) <br>Welcome here~It's a place for recording, and may be enriched later. This is totally a brand new field to me. I don't know how far  I can go and what the future will be like. But I still do believe that I should have a try. It will take much longer to be familiar with all these things to me. <br>But I will try~</p>
+				<p>Some really silly foreword. : ) <br>Welcome here~It's a place for recording, and may be enriched later. This is totally a brand new field to me. I don't know how far  I can go and what the future will be like. But I still do believe that I should have a try. It may take much longer to be familiar with all these things to me. <br>But I will try~</p>
 			</div>
 			<div class="thumbnail span4">
 				<img src="img/me.png" alt="me">
@@ -36,47 +36,30 @@
 		
 		<div class="main row-fluid">
 			<div class="divider" id="main"></div>
-			<article class="span7 offset1">
-				<h1>学习进度记录7：handlebars</h1>
-				<p>初识handlebar~跟随学习进度的最基础的部分，mark一下，待后面发现更多作用。</p>
-				<a href="jQuery-practice/event-4/handlebars.html" target="_blank">VIEW MORE...</a>
+			<article class="span12 row-fluid">
+				<script id="template" type="text/x-handlebars-template">
+				{{#each this}}
+					<div class="article span7 offset1">
+					<a href={{caselink}} target="_blank">
+						<h2>▍≡ {{casetitle}}</h2>
+					</a>
+					<div>{{{casebody}}}</div>
+				</div>
+				<div class="atc-thumbnail span3">
+					<a href={{caselink}} target="_blank"><img src={{caseimg}} alt="img"></a> 
+				</div>
+				{{/each}}
+				</script>
+				
 			</article>
-			<article class="span7 offset1">
-				<h1>学习进度记录6：jQuery-slider</h1>
-				<p>一个简单的slider写法，注意简化方法</p>
-				<a href="jQuery-practice/event-3 slider/2.html" target="_blank">VIEW MORE...</a>
-			</article>
-			<article class="span7 offset1">
-				<h1>学习进度记录5：jQuery-contact form</h1>
-				<p></p>
-				<a href="jQuery-practice/contact/2.html" target="_blank">VIEW MORE...</a>
-			</article>
-			<article class="span7 offset1">
-				<h1>学习进度记录4：jQuery-play with it</h1>
-				<p>虽然很无聊，不过自己弄点效果玩玩。【仅为记录，无聊慎点】</p>
-				<a href="jQuery-practice/event-2/a little creation.html" target="_blank">VIEW MORE...</a>
-			</article>
-			<article class="span7 offset1">
-				<h1>学习进度记录3：jQuery-question</h1>
-				<p>终于开始接触点看起来蛮不错的效果了：）</p>
-				<a href="jQuery-practice/event-2/2.html" target="_blank">VIEW MORE...</a>
-			</article>
-			<article class="span7 offset1">
-				<h1>学习进度记录2：jQuery-Day&Night</h1>
-				<a href="jQuery-practice/event-1/experiment.html" target="_blank">VIEW MORE...</a>
-			</article>
-			<article class="span7 offset1">
-				<h1>学习进度记录1：index page 练习</h1>
-				<p>刚开始学html & css，在网上找的模板练习，view more查看效果~</p>
-				<a href="organic-practice_2/html/index.html" target="_blank">VIEW MORE...</a>
-			</article>
-
-			<div class="sidebar span3 offset1"></div>
 		</div>
 	</div>
 
 <script src="js/jquery-2.1.1.js"></script>
 <script src="js/bootstrap.js"></script>
+<script src="js/handlebars-v1.3.0.js"></script>
+<script src="js/index.js"></script>
+
 <script>
 	(function() {
 		$('.reverse-btn').on('click', function() {

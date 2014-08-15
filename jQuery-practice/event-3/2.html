@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>2_slider</title>
+	<link rel="stylesheet" href="2.css">
+</head>
+<body>
+	<div class="slider">
+		<ul>
+			<li><img src="img/img1.jpg" alt="1.jpg"></li>
+			<li><img src="img/img2.jpg" alt="2.jpg"></li>
+			<li><img src="img/img3.jpg" alt="3.jpg"></li>
+			<li><img src="img/img4.jpg" alt="4.jpg"></li>
+			<li><img src="img/img5.jpg" alt="5.jpg"></li>
+		</ul>
+	</div>
+	
+	<div id="slider_nav">
+		<button data-dir="prev">Previews</button>
+		<button data-dir="next">Next</button>
+	</div>
+
+	<script src="../jquery-2.1.1.js"></script>
+	<script src="2.js"></script>
+
+	<script>
+	var container = $('div.slider').css('overflow','hidden').children('ul'),
+		Slider = new Slider( container, $('#slider_nav') );
+
+	$('#slider_nav').find('button').on('click', function() {
+		Slider.setCurrent( $(this).data('dir'));
+		Slider.transition();
+	});     
+
+	</script>
+</body>
+</html>
