@@ -12,13 +12,13 @@ body {
 	margin: 0 auto;
 }
 
-.reverse {
+/*.reverse {
 	-webkit-animation: reversal 2s infinite;
 	-o-animation: reversal 2s infinite;
 	-ms-animation: reversal 2s infinite;
 	-moz-animation: reversal 2s infinite;
 	animation: reversal 2s infinite;
-}
+}*/
 
 /********************** nav *********************/
 .website-name {
@@ -30,7 +30,7 @@ body {
 	line-height: 1em;
 }
 
-.reverse-btn {
+/*.reverse-btn {
 	position: absolute;
 	margin-top: 130px;
 	color: #6d0606;
@@ -40,7 +40,7 @@ body {
 	padding: 20px 10px;
 	font-size: 1.5em;
 	cursor: pointer;
-}
+}*/
 
 .website-name h1 {
 	font-size: 3em;
@@ -88,7 +88,7 @@ body {
 	width: 150px;
 	margin: 70px 110px;
 	border-radius: 50%;
-	display: none;
+	/*display: none;*/
 }
 
 /********************** main *********************/
@@ -124,7 +124,7 @@ article a {
 	margin-top: 10px;
 }
 
-
+/*
 @-webkit-keyframes reversal {
 	0% { -webkit-transform: rotateY(180deg); }
 	100% { -webkit-transform: rotateY(180deg); }
@@ -144,4 +144,4 @@ article a {
 @keyframes reversal {
 	0% { transform: rotateY(180deg); }
 	100% { transform: rotateY(180deg); }
-}
+}*/
