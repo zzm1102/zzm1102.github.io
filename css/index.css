@@ -2,9 +2,10 @@ body {
 	height: 100%;
 	margin: 0 auto;
 	background: #f6f6f6 url('../img/background4.jpg') 0 0 no-repeat;
+	background-size: cover;
 	background-attachment: fixed;
+	min-width: 958px;
 	font-family: "Microsoft Yahei", Arial, "Helvetica Neue", Helvetica, sans-serif;
-
 }
 
 .container-fluid {

@@ -88,5 +88,10 @@
 	var template = Handlebars.compile( $('#template').html() );
 
 	$('article.span12').append( template(post) );
+	
+	$('#scroll-down').click(function(e) {
+		$("body").animate({scrollTop:722},300);
+		e.preventDefault();
+	})
 
 })(jQuery);
