@@ -1,6 +1,24 @@
 (function($) {
 	var post = [
 	{
+		caselink: 'html5/hive/new_hive/new_hive.html',
+		casetitle: 'animation 写效果~',
+		casebody: '更新中，初级稿',
+		caseimg: 'img/case17.jpg'
+	},
+	{
+		caselink: 'html5/hive/index.html',
+		casetitle: '展示型网页',
+		casebody: '不会上线了，当布局练习吧虽然写得还是很烂~',
+		caseimg: 'img/case16.jpg'
+	},
+	{
+		caselink: 'html5/bloves/bloves.html',
+		casetitle: '手机端html5实践案例',
+		casebody: '跟随小火车去追寻回忆~chrome emulation 打开哦~ ',
+		caseimg: 'img/case15.jpg'
+	},
+	{
 		caselink: 'follow-Jennifer-180/Day-15/dropping.html',
 		casetitle: 'Imitating Jennifer5 ：dropping box',
 		casebody: '5 种不同的animation效果。Have fun with it~',
@@ -9,7 +27,7 @@
 	{
 		caselink: 'follow-Jennifer-180/Day-13/rock_paper_scissors.html',
 		casetitle: 'Imitating Jennifer5 ：rock paper scissors',
-		casebody: '还是原来的游戏，还是熟悉的味道~剪刀石头布，过来决一胜负吧hohaha！<br>不过明明随机的，怎么好像每次都是我输得多一点 - - <br><br><strong>POINT:</strong> Math.floor( Math.random()*3 ), countDown, animation ',
+		casebody: '还是原来的游戏，还是熟悉的味道~剪刀石头布，过来决一胜负吧hohaha！<br>不过明明随机的，怎么好像每次都是我输得多一点...不嗨森 - - <br><br><strong>POINT:</strong> Math.floor( Math.random()*3 ), countDown, animation ',
 		caseimg: 'img/case13.png'
 	},
 	{
@@ -21,7 +39,7 @@
 	{
 		caselink: 'follow-Jennifer-180/Day-9/bouncing_ball.html',
 		casetitle: 'Imitating Jennifer4 ：bouncing ball',
-		casebody: '喵~学来的第一个小游戏，感受下 insane 的感觉吧！',
+		casebody: '学来的第一个小游戏，感受下 insane 的感觉吧！',
 		caseimg: 'img/case11.png'
 	},
 	{
