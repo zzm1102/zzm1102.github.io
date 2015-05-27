@@ -1,6 +1,12 @@
 (function($) {
 	var post = [
 	{
+		caselink: 'html5/hive/hive-logo/index.html',
+		casetitle: 'animation 写效果之 loading 图片',
+		casebody: '进度条啊进度条~ clip：rect() 用两个半圆旋转实现 loading 状态',
+		caseimg: 'img/case18.jpg'
+	},
+	{
 		caselink: 'html5/hive/new_hive/new_hive.html',
 		casetitle: 'animation 写效果~',
 		casebody: '更新中，初级稿',
