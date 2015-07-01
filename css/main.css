@@ -101,7 +101,7 @@ html, body {
 	font-family: "microsoft yahei","HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: #333;
 }
-* {transition: all 1s;}
+* {}
 .main-wrap {
 	height: 100%; width: 1000px; margin: 0 auto;
 }
@@ -110,6 +110,8 @@ html, body {
 	height: 100%;
 	margin: 0 auto;
 	background-color: #fff;
+	z-index: 100;
+	transition: all 1s;
 }
 #my-logo {
 	margin: -180px auto;
@@ -143,6 +145,7 @@ html, body {
 	margin-top: 21px;
 	margin-right: 20px;
 	cursor: e-resize;
+	transition: all 1s;
 }
 #top-menu:hover {
 	border: 2px solid #ccc;
@@ -162,6 +165,7 @@ html, body {
 .change-nav #my-logo img {
 	width: 50px;
 	height: 50px;
+	transition: all 1s;
 }
 .change-nav #my-logo {
 	top: 0;
@@ -177,6 +181,7 @@ html, body {
 	width: 1000px;
 	padding-top: 100px;
 	overflow: hidden;
+	position: relative;
 }
 #main-content a {
 	text-decoration: none;
@@ -192,12 +197,13 @@ html, body {
 }
 
 #main-content .article{
-	width: 770px;
+	width: 750px;
 }
 #main-content .atc-thumbnail img {
 	width: 200px;
 	margin-top: 40px;
 	box-shadow: 2px 6px 18px #a9a9a9;
+	transition: all 1s;
 }
 #main-content .atc-thumbnail img:hover {
 	box-shadow: 3px 10px 25px #7EA6B2;
@@ -212,8 +218,14 @@ html, body {
 	color: #999;
 	margin-bottom: 20px;
 }
-#main-content .mix-info span {
-	margin-right: 130px;
+#main-content .mix-info > span {
+	margin-right: 100px;
+}
+#main-content .mix-info a {
+	color: #D7A56D;
+}
+#main-content .mix-info a:hover {
+	border-bottom: 1px solid #D7A56D;
 }
 #main-content blockquote {
 	margin: 30px;
@@ -245,6 +257,34 @@ html, body {
 	background-size: 21px;
 }
 
+/*回到顶部*/
+#back2top {
+	width: 36px;
+	padding-top: 21px;
+	color: #fff;
+	border: 2px solid #717171;
+	background-color: #717171;
+	position: fixed;
+	left: 50%;
+	bottom: 50px;
+	margin-left: 530px;
+	display: none;
+	font-size: 14px;
+	text-align: center;
+	cursor: pointer;
+}
+#back2top:hover {
+	background-color: #444;
+	border: 2px solid #444;
+}
+#back2top::before {
+	content: "";
+	border: 10px solid;
+	border-color: transparent transparent #f5f5f5;
+	position: absolute;
+	top: -2px;
+	left: 7px;
+}
 
 
 
