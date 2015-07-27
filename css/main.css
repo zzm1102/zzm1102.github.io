@@ -101,7 +101,6 @@ html, body {
 	font-family: "microsoft yahei","HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: #333;
 }
-* {}
 .main-wrap {
 	height: 100%; width: 1000px; margin: 0 auto;
 }
@@ -124,9 +123,10 @@ html, body {
 	height: 150px;
 	display: block;
 }
-#my-logo h3 {
+#my-logo p {
 	text-align: center;
 	font-size: 23px;
+	cursor: pointer;
 }
 #my-logo .breathing {
 	color: #ccc;
@@ -174,7 +174,7 @@ html, body {
 	width: 60px;
 	vertical-align: bottom;
 }
-.change-nav #my-logo h3 {display: none;}
+.change-nav #my-logo p {display: none;}
 
 #main-content {
 	display: none;
@@ -186,7 +186,7 @@ html, body {
 #main-content a {
 	text-decoration: none;
 }
-#main-content a h2 {
+#main-content a h1 {
 	color: #333;
 	font-size: 26px;
 	font-weight: lighter;
@@ -198,6 +198,9 @@ html, body {
 
 #main-content .article{
 	width: 750px;
+}
+#main-content .article h2 {
+	font-size: 16px;
 }
 #main-content .atc-thumbnail img {
 	width: 200px;
@@ -286,7 +289,15 @@ html, body {
 	left: 7px;
 }
 
+/*目录*/
+#TOC {padding: 10px; background-color: #333; position: fixed; top: 0; left: -25%; height: 100%; overflow-y: auto; overflow-x: hidden; width: 21%;transition: all 1s; z-index: 90;} 
+.TOCEntry { font-family: "microsoft yahei"; margin: 15px 10px;} 
+.TOCEntry a {text-decoration: none; color: #fff;} 
+.TOCLevel1 {font-size: 16px; }
+.TOCLevel2 {font-size: 14px; margin-left: .5in;}
+.TOCSectNum:after {content: ": ";}
 
+#TOC.fade {left: 0;}
 
 
 

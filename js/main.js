@@ -15,4 +15,8 @@ $(function() {
 		$('body').animate({"scrollTop": "0"}, 200);
 	})
 	
+	$("#top-menu").on("click", function() {
+		$("#TOC").toggleClass("fade");
+	})
+	
 })
