@@ -291,10 +291,12 @@ html, body {
 
 /*目录*/
 #TOC {padding: 10px; background-color: #333; position: fixed; top: 0; left: -25%; height: 100%; overflow-y: auto; overflow-x: hidden; width: 21%;transition: all 1s; z-index: 90;} 
-.TOCEntry { font-family: "microsoft yahei"; margin: 15px 10px;} 
-.TOCEntry a {text-decoration: none; color: #fff;} 
+.TOCEntry { font-family: "microsoft yahei"; margin: 13px 10px;} 
+.TOCEntry a {text-decoration: none; color: #DBDBDB; transition: all .4s;} 
+.TOCEntry a:hover {color: #F7D680;}
 .TOCLevel1 {font-size: 16px; }
 .TOCLevel2 {font-size: 14px; margin-left: .5in;}
+.TOCLevel1 a {color: #B0CAD2;}
 .TOCSectNum:after {content: ": ";}
 
 #TOC.fade {left: 0;}
