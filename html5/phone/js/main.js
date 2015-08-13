@@ -86,7 +86,7 @@
 		}
 		
 		//判断 关闭页面
-		if($('.me').length >= 3) {
+		if($('.me').length >= 1) {
 			$("#chatting .top").on("click", function() {
 				$("#chatting").addClass("hide");
 				$("#friends").removeClass("hide");
