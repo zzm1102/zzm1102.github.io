@@ -96,21 +96,22 @@ textarea {
    ========================================================================== */
 html, body { 
 	margin: 0; 
-	padding: 0; 
+	padding: 0;
+	width: 100%; 
 	height: 100%;
 	font-family: "microsoft yahei","HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: #333;
 }
 .main-wrap {
-	height: 100%; width: 1000px; margin: 0 auto;
+	height: 100%; width: 60%; margin: 0 auto;
 }
 #main-nav {
-	width: 1000px;
+	width: 60%;
 	height: 100%;
 	margin: 0 auto;
 	background-color: #fff;
 	z-index: 100;
-	transition: all 1s;
+	/*transition: all 1s;*/
 }
 #my-logo {
 	margin: -180px auto;
@@ -153,7 +154,7 @@ html, body {
 	background-color: #666;
 }
 #main-nav.change-nav {
-	width: 1000px;
+	/*width: 60%;*/
 	height: 70px;
 	margin: 0 auto;
 	position: fixed;
@@ -178,7 +179,7 @@ html, body {
 
 #main-content {
 	display: none;
-	width: 1000px;
+/*	width: 60%;*/
 	padding-top: 100px;
 	overflow: hidden;
 	position: relative;
@@ -197,10 +198,10 @@ html, body {
 }
 
 #main-content .article{
-	width: 750px;
+	width: 75%;
 }
 #main-content .article div{
-	width: 550px;
+	width: 75%;
 }
 #main-content .article h2 {
 	font-size: 16px;
@@ -225,7 +226,7 @@ html, body {
 	margin-bottom: 20px;
 }
 #main-content .mix-info > span {
-	margin-right: 100px;
+	margin-right: 10%;
 }
 #main-content .mix-info a {
 	color: #D7A56D;
@@ -292,8 +293,10 @@ html, body {
 	left: 7px;
 }
 
+.mask {display: none; width: 100%; height: 100%; background-color: rgba(0,0,0,.2); z-index: 150; position: fixed; bottom: 0;}
+
 /*目录*/
-#TOC {padding: 10px; background-color: #333; position: fixed; top: 0; left: -25%; height: 100%; overflow-y: auto; overflow-x: hidden; width: 21%;transition: all 1s; z-index: 90;} 
+#TOC {padding: 10px; background-color: #333; position: fixed; top: 0; left: -25%; height: 100%; overflow-y: auto; overflow-x: hidden; width: 21%;transition: all 1s; z-index: 160;} 
 .TOCEntry { font-family: "microsoft yahei"; margin: 13px 10px;} 
 .TOCEntry a {text-decoration: none; color: #DBDBDB; transition: all .4s;} 
 .TOCEntry a:hover {color: #F7D680;}
@@ -303,6 +306,49 @@ html, body {
 .TOCSectNum:after {content: ": ";}
 
 #TOC.fade {left: 0;}
+
+/*媒体查询*/
+@media only screen and (max-width:1400px ) {
+	#main-content .article {
+	  width: 66%;
+	}
+	#main-content .article div {
+	  width: 66%;
+	}
+	#main-content .article div {
+	  width: 66%;
+	}
+}
+@media only screen and (max-width:1024px ) {
+	.main-wrap {
+		width: 80%;
+	}
+	#main-nav {
+		width: 80%;
+	}
+	#main-content .article {
+	  width: 70%;
+	}
+	#main-content .article div {
+	  width: 70%;
+	}
+	#TOC {width: 60%; left: -65%;}
+}
+@media only screen and (max-width:568px ) {
+	.main-wrap {
+		width: 90%;
+	}
+	#main-nav {
+		width: 90%;
+	}
+	#main-content .article {
+	  width: 90%;
+	}
+	#main-content .article div {
+	  width: 100%;
+	}
+	#TOC {width: 60%; left: -65%;}
+}
 
 
 

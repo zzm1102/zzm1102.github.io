@@ -16,7 +16,12 @@ $(function() {
 	})
 	
 	$("#top-menu").on("click", function() {
-		$("#TOC").toggleClass("fade");
+		$("#TOC").addClass("fade");
+		$(".mask").fadeIn(400);
+	})
+	$(".mask").on("click", function() {
+		$("#TOC").removeClass("fade");
+		$(".mask").fadeOut(400);
 	})
 	
 })
