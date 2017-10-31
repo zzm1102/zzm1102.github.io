@@ -7,12 +7,13 @@
   <title>外卖计算器</title>
 </head>
 <body>
-    <p>优惠后总价 <input type="number" id="reduce" /></p>
-    <p>总优惠：<input type="number" id="coupon" /></p>
     <p>人数：<input type="number" id="num" onchange="handleChange(this.value)" /></p>
     <p>优惠前个人付款</p>
     <div id="people"></div>
     <p>其他费用：<input type="number" id="miscellaneous" /></p>
+
+    <p>总优惠：<input type="number" id="coupon" /></p>
+    <p>优惠后总价 <input type="number" id="reduce" /></p>
     
     <br>
     <button id="calculate" onclick="handleCal()">开始计算</button>
