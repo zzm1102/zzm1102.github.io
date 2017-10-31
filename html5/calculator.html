@@ -7,11 +7,13 @@
   <title>外卖计算器</title>
 </head>
 <body>
-    <p>优惠前总价 <input type="text" id="total" /></p>
-    <p>人数：<input type="number" id="num" onchange="handleChange(this.value)"></p>
+    <p>优惠后总价 <input type="number" id="reduce" /></p>
+    <p>总优惠：<input type="number" id="coupon" /></p>
+    <p>人数：<input type="number" id="num" onchange="handleChange(this.value)" /></p>
     <p>优惠前个人付款</p>
     <div id="people"></div>
-    <p>优惠后总价 <input type="text" id="reduce" /></p>
+    <p>其他费用：<input type="number" id="miscellaneous" /></p>
+    
     <br>
     <button id="calculate" onclick="handleCal()">开始计算</button>
     <p>优惠分摊到个人应付款</p>
@@ -22,34 +24,44 @@
     <script>
       var num = document.getElementById("num");
       var people = document.getElementById("people");
-      var actual = document.getElementById("actual");
     
       handleChange = function (val) {
         people.innerHTML = "";
         if(val > 0) {
           for( var i=0; i<val; i++ ) {
-            people.append("参与"+(i+1)+":", document.createElement("input"))
+            people.append("参与"+(i+1)+"：", document.createElement("input"),document.createElement("br") )
           } 
         }
         document.querySelectorAll("#people input").forEach(function(e,i) {
           e.className = 'before';
+          e.type = 'number';
         })
       }
     
       handleCal = function() {
         var list = [];
         var allBefore = document.querySelectorAll(".before");
-        var totalVal = document.getElementById('total').value;
-        var reducedVal = document.getElementById('reduce').value;
+        var reducedVal = parseFloat(document.getElementById('reduce').value);
+        var totalVal = reducedVal + parseFloat(document.getElementById('coupon').value);
+
+        var miscellaneous = parseFloat(document.getElementById('miscellaneous').value) || 0;
+
         var sum = 0;
         var actual = document.getElementById('actual');
         actual.innerHTML = "";
+        averageMis = parseFloat(miscellaneous / parseInt(num.value));
+        console.log(averageMis)
     
         allBefore.forEach(function(e,i) {
-          sum += parseInt(e.value);
-          list.push(e.value / totalVal * reducedVal)
+          sum += parseFloat(e.value);
+          list.push((parseFloat(e.value)+averageMis) / totalVal * reducedVal)
         })
-        if(sum != parseInt(totalVal)) {
+        
+        sum += miscellaneous;
+        console.log(sum)
+        console.log(totalVal)
+
+        if(sum != totalVal) {
           console.log(sum)
           alert("优惠前个人付款总和应该等于总价")
           return;
@@ -68,7 +80,7 @@
         var reduceSum = 0;
         list.reduce(function(pre, cur) {
           reduceSum = pre + cur;
-          return reduceSum;
+          return reduceSum.toFixed(1);
         })
         document.getElementById('validate').innerText = reduceSum;
       }
