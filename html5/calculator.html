@@ -51,7 +51,6 @@
         var actual = document.getElementById('actual');
         actual.innerHTML = "";
         averageMis = parseFloat(miscellaneous / parseInt(num.value));
-        console.log(averageMis)
     
         allBefore.forEach(function(e,i) {
           sum += parseFloat(e.value);
@@ -59,8 +58,6 @@
         })
         
         sum += miscellaneous;
-        console.log(sum)
-        console.log(totalVal)
 
         if(sum != totalVal) {
           console.log(sum)
