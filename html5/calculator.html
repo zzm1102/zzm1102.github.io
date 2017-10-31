@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>外卖计算器</title>
+</head>
+<body>
+    <p>优惠前总价 <input type="text" id="total" /></p>
+    <p>人数：<input type="number" id="num" onchange="handleChange(this.value)"></p>
+    <p>优惠前个人付款</p>
+    <div id="people"></div>
+    <p>优惠后总价 <input type="text" id="reduce" /></p>
+    <br>
+    <button id="calculate" onclick="handleCal()">开始计算</button>
+    <p>优惠分摊到个人应付款</p>
+    <div id="actual"></div>
+    
+    <p>核对计算总价：<span id="validate"></span></p>
+    
+    <script>
+      var num = document.getElementById("num");
+      var people = document.getElementById("people");
+      var actual = document.getElementById("actual");
+    
+      handleChange = function (val) {
+        people.innerHTML = "";
+        if(val > 0) {
+          for( var i=0; i<val; i++ ) {
+            people.append("参与"+(i+1)+":", document.createElement("input"))
+          } 
+        }
+        document.querySelectorAll("#people input").forEach(function(e,i) {
+          e.className = 'before';
+        })
+      }
+    
+      handleCal = function() {
+        var list = [];
+        var allBefore = document.querySelectorAll(".before");
+        var totalVal = document.getElementById('total').value;
+        var reducedVal = document.getElementById('reduce').value;
+        var sum = 0;
+        var actual = document.getElementById('actual');
+        actual.innerHTML = "";
+    
+        allBefore.forEach(function(e,i) {
+          sum += parseInt(e.value);
+          list.push(e.value / totalVal * reducedVal)
+        })
+        if(sum != parseInt(totalVal)) {
+          console.log(sum)
+          alert("优惠前个人付款总和应该等于总价")
+          return;
+        }
+        showResult(list, actual);
+        validate(list);
+      }
+    
+      showResult = function(list, ele) {
+        list.forEach(function(e, i) {
+          ele.append(`参与${i+1}: ￥${e.toFixed(1)}`, document.createElement('br'));
+        })
+      }
+    
+      validate = function(list) {
+        var reduceSum = 0;
+        list.reduce(function(pre, cur) {
+          reduceSum = pre + cur;
+          return reduceSum;
+        })
+        document.getElementById('validate').innerText = reduceSum;
+      }
+    </script>
+  
+</body>
+</html>
