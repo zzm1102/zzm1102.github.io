@@ -54,7 +54,7 @@
     
         allBefore.forEach(function(e,i) {
           sum += parseFloat(e.value);
-          list.push((parseFloat(e.value)) / (totalVal) * reducedVal)
+          list.push( parseFloat((parseFloat(e.value) / totalVal * reducedVal).toFixed(4)) )
         })
         
         sum += miscellaneous;
@@ -70,17 +70,20 @@
     
       showResult = function(list, ele) {
         list.forEach(function(e, i) {
-          ele.append(`参与${i+1}: ￥${e.toFixed(1)}`, document.createElement('br'));
+          ele.append(`参与${i+1}: ￥${parseFloat(e.toFixed(4)).toFixed(1)}`, document.createElement('br'));
+          console.log(e)
         })
       }
     
       validate = function(list) {
         var reduceSum = 0;
+        console.log(list)
         list.reduce(function(pre, cur) {
-          reduceSum = pre + cur;
+          reduceSum = parseFloat(pre.toFixed(1)) + parseFloat(cur.toFixed(1));
+          console.log(reduceSum);
           return parseFloat(reduceSum);
         })
-        reduceSum = reduceSum.toFixed(1);
+        
         document.getElementById('validate').innerText = reduceSum;
       }
     </script>
