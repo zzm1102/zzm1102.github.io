@@ -80,6 +80,7 @@
           reduceSum = pre + cur;
           return parseFloat(reduceSum);
         })
+        reduceSum = reduceSum.toFixed(1);
         document.getElementById('validate').innerText = reduceSum;
       }
     </script>
